@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Denúncias Anônimas de Professores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpeg" alt="Logo" id="logo">
+        <span class="header-text">CHAPA 3: VAMOS À LUTA!</span>
+    </header>
+    <main>
+        <!-- Seção de Denúncias -->
+        <section id="denuncias">
+            <h1>Denúncia Anônima de Professores do CFCH</h1>
+            <form id="denunciaForm">
+                <label for="nomeProfessor">Nome do Professor:</label>
+                <input type="text" id="nomeProfessor" name="nomeProfessor" required>
+                
+                <label for="departamento_professor">Departamento do Professor:</label>
+                <input type="text" id="departamento_professor" name="departamento_professor" required>
+
+                <label for="local">Local onde ocorreu:</label>
+                <input type="text" id="local" name="local" required>
+
+                <label for="horario">Horário:</label>
+                <input type="text" id="horario" name="horario" required>
+
+                <label for="descricao">Descrição do que ocorreu:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+
+                <button type="submit">Enviar Denúncia</button>
+            </form>
+        </section>
+
+        <!-- Seção de Sugestões -->
+        <section id="sugestoes">
+            <h1>Sugestões para o DACS - CC</h1>
+            <form id="sugestaoForm">
+                <label for="sugestao_descricao">Como podemos melhorar?</label>
+                <textarea id="sugestao_descricao" name="sugestao_descricao" required></textarea>
+
+                <button type="submit">Enviar Sugestão</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Feito pela CHAPA 3</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
