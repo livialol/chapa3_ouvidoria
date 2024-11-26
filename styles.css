@@ -1,6 +1,14 @@
+/* styles.css */
+
+/* Estilos Globais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da viewport */
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -11,12 +19,13 @@ header {
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 44px;
+    height: 60px; /* Ajustado para melhor visualização em mobile */
 }
 
 #logo {
-    height: 50px;
+    height: 50px; /* Ajustado para caber melhor em telas menores */
     position: absolute;
+    bottom: 10px;
     left: 10px;
 }
 
@@ -24,11 +33,13 @@ header {
     color: #fff;
     font-size: 1.2em;
     font-weight: bold;
+    text-align: center;
 }
 
 main {
+    flex: 1; /* Permite que o main ocupe o espaço disponível */
     max-width: 800px;
-    margin: 50px auto;
+    margin: 80px auto 60px; /* Ajustado para não ficar atrás do footer */
     padding: 20px;
 }
 
@@ -43,6 +54,7 @@ h1 {
     color: #094624;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 1.5em; /* Reduzido para mobile */
 }
 
 form {
@@ -53,6 +65,7 @@ form {
 label {
     margin-top: 15px;
     color: #094624;
+    font-size: 1em; /* Ajustado para melhor leitura */
 }
 
 input, textarea {
@@ -61,6 +74,7 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+    font-size: 1em; /* Ajustado para melhor leitura */
 }
 
 button {
@@ -72,6 +86,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 1em; /* Ajustado para melhor leitura */
 }
 
 button:hover {
@@ -83,7 +98,91 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    /* Removido position: fixed; e bottom: 0; */
+    /* Adicionado para espaçamento adequado */
     width: 100%;
-    bottom: 0;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    /* Ajustes para tablets e dispositivos médios */
+    header {
+        height: 70px;
+    }
+
+    #logo {
+        height: 50px;
+    }
+
+    .header-text {
+        font-size: 1.5em;
+    }
+
+    main {
+        margin: 100px auto 70px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    label, input, textarea, button {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para smartphones */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    #logo {
+        position: static;
+        margin-bottom: 10px;
+        height: 40px;
+    }
+
+    .header-text {
+        font-size: 1.3em;
+    }
+
+    main {
+        margin: 20px auto 80px;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    label {
+        margin-top: 10px;
+        font-size: 1em;
+    }
+
+    input, textarea {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        /* Removido position: fixed; para evitar sobreposição */
+        position: static;
+        padding: 15px;
+        font-size: 1em;
+    }
 }
