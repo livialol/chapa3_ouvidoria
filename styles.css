@@ -23,7 +23,7 @@ header {
 }
 
 #logo {
-    height: 50px; /* Ajustado para caber melhor em telas menores */
+    height: 65px; /* Ajustado para caber melhor em telas menores */
     position: absolute;
     bottom: 10px;
     left: 10px;
